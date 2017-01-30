@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C42705251E3FE8DD00B8B570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42705241E3FE8DD00B8B570 /* AppDelegate.swift */; };
-		C42705271E3FE8DD00B8B570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42705261E3FE8DD00B8B570 /* ViewController.swift */; };
 		C427052A1E3FE8DD00B8B570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42705281E3FE8DD00B8B570 /* Main.storyboard */; };
 		C427052D1E3FE8DD00B8B570 /* RandomListTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C427052B1E3FE8DD00B8B570 /* RandomListTest.xcdatamodeld */; };
 		C427052F1E3FE8DD00B8B570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C427052E1E3FE8DD00B8B570 /* Assets.xcassets */; };
 		C42705321E3FE8DD00B8B570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42705301E3FE8DD00B8B570 /* LaunchScreen.storyboard */; };
+		C427053D1E3FF48700B8B570 /* ParentRandomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C427053C1E3FF48700B8B570 /* ParentRandomListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C42705211E3FE8DD00B8B570 /* RandomListTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomListTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42705241E3FE8DD00B8B570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C42705261E3FE8DD00B8B570 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C42705291E3FE8DD00B8B570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C427052C1E3FE8DD00B8B570 /* RandomListTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RandomListTest.xcdatamodel; sourceTree = "<group>"; };
 		C427052E1E3FE8DD00B8B570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42705311E3FE8DD00B8B570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42705331E3FE8DD00B8B570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C427053C1E3FF48700B8B570 /* ParentRandomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentRandomListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		C42705231E3FE8DD00B8B570 /* RandomListTest */ = {
 			isa = PBXGroup;
 			children = (
-				C42705241E3FE8DD00B8B570 /* AppDelegate.swift */,
-				C42705261E3FE8DD00B8B570 /* ViewController.swift */,
+				C42705391E3FEB0400B8B570 /* Supporting Files */,
+				C427053A1E3FEB5000B8B570 /* ParentList */,
 				C42705281E3FE8DD00B8B570 /* Main.storyboard */,
-				C427052E1E3FE8DD00B8B570 /* Assets.xcassets */,
-				C42705301E3FE8DD00B8B570 /* LaunchScreen.storyboard */,
-				C42705331E3FE8DD00B8B570 /* Info.plist */,
 				C427052B1E3FE8DD00B8B570 /* RandomListTest.xcdatamodeld */,
 			);
 			path = RandomListTest;
+			sourceTree = "<group>";
+		};
+		C42705391E3FEB0400B8B570 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C42705241E3FE8DD00B8B570 /* AppDelegate.swift */,
+				C427052E1E3FE8DD00B8B570 /* Assets.xcassets */,
+				C42705301E3FE8DD00B8B570 /* LaunchScreen.storyboard */,
+				C42705331E3FE8DD00B8B570 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C427053A1E3FEB5000B8B570 /* ParentList */ = {
+			isa = PBXGroup;
+			children = (
+				C427053B1E3FEB6100B8B570 /* Controller */,
+			);
+			name = ParentList;
+			sourceTree = "<group>";
+		};
+		C427053B1E3FEB6100B8B570 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C427053C1E3FF48700B8B570 /* ParentRandomListTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42705271E3FE8DD00B8B570 /* ViewController.swift in Sources */,
+				C427053D1E3FF48700B8B570 /* ParentRandomListTableViewController.swift in Sources */,
 				C42705251E3FE8DD00B8B570 /* AppDelegate.swift in Sources */,
 				C427052D1E3FE8DD00B8B570 /* RandomListTest.xcdatamodeld in Sources */,
 			);
@@ -304,6 +328,7 @@
 				C42705381E3FE8DD00B8B570 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

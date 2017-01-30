@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RandomList" representedClassName="RandomList" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="listItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RandomListItem" inverseName="list" inverseEntity="RandomListItem" syncable="YES"/>
+    </entity>
+    <entity name="RandomListItem" representedClassName="RandomListItem" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RandomList" inverseName="listItems" inverseEntity="RandomList" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RandomList" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="RandomListItem" positionX="-54" positionY="0" width="128" height="75"/>
+    </elements>
 </model>

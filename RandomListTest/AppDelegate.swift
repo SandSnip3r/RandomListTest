@@ -17,7 +17,110 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //generateTestData()
         return true
+    }
+    
+    func generateTestData() {
+        do {
+            let list = RandomList(context: managedObjectContext)
+            list.title = "Co-workers"
+            
+            let listItem1 = RandomListItem(context: managedObjectContext)
+            listItem1.name = "Perry"
+            listItem1.list = list
+            
+            let listItem2 = RandomListItem(context: managedObjectContext)
+            listItem2.name = "Caleb"
+            listItem2.list = list
+            
+            let listItem3 = RandomListItem(context: managedObjectContext)
+            listItem3.name = "Brian"
+            listItem3.list = list
+            
+            let listItem4 = RandomListItem(context: managedObjectContext)
+            listItem4.name = "Ryan"
+            listItem4.list = list
+            
+            let listItem5 = RandomListItem(context: managedObjectContext)
+            listItem5.name = "Aria"
+            listItem5.list = list
+        }
+        do {
+            let list = RandomList(context: managedObjectContext)
+            list.title = "Workouts"
+            
+            let listItem1 = RandomListItem(context: managedObjectContext)
+            listItem1.name = "Chest, triceps, and calves"
+            listItem1.list = list
+            
+            let listItem2 = RandomListItem(context: managedObjectContext)
+            listItem2.name = "Back, biceps, and abs"
+            listItem2.list = list
+            
+            let listItem3 = RandomListItem(context: managedObjectContext)
+            listItem3.name = "Shoulders, traps, and calves"
+            listItem3.list = list
+            
+            let listItem4 = RandomListItem(context: managedObjectContext)
+            listItem4.name = "Legs and abs"
+            listItem4.list = list
+        }
+        do {
+            let list = RandomList(context: managedObjectContext)
+            list.title = "Candies"
+            
+            let listItem1 = RandomListItem(context: managedObjectContext)
+            listItem1.name = "M&Ms"
+            listItem1.list = list
+            
+            let listItem2 = RandomListItem(context: managedObjectContext)
+            listItem2.name = "Heath"
+            listItem2.list = list
+            
+            let listItem3 = RandomListItem(context: managedObjectContext)
+            listItem3.name = "Take 5"
+            listItem3.list = list
+            
+            let listItem4 = RandomListItem(context: managedObjectContext)
+            listItem4.name = "Payday"
+            listItem4.list = list
+            
+            let listItem5 = RandomListItem(context: managedObjectContext)
+            listItem5.name = "Butterfinger"
+            listItem5.list = list
+        }
+        do {
+            let list = RandomList(context: managedObjectContext)
+            list.title = "This list has a really long title for testing purposes"
+            
+            for letter in ["a","b","c","d","e","f"] {
+                var str = "Long list item"
+                for _ in 0..<100 {
+                    str += letter
+                }
+                let listItem = RandomListItem(context: managedObjectContext)
+                listItem.name = str
+                listItem.list = list
+            }
+        }
+        do {
+            let list = RandomList(context: managedObjectContext)
+            list.title = "Favorite 3 digit numbers"
+            
+            for i in 100..<1000 {
+                if arc4random_uniform(5) == 0 {
+                    let listItem = RandomListItem(context: managedObjectContext)
+                    listItem.name = "\(i)"
+                    listItem.list = list
+                }
+            }
+        }
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print(error)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -90,4 +193,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let managedObjectContext = appDelegate.persistentContainer.viewContext
 
