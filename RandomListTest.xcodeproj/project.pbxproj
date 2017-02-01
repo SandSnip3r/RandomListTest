@@ -13,6 +13,9 @@
 		C427052F1E3FE8DD00B8B570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C427052E1E3FE8DD00B8B570 /* Assets.xcassets */; };
 		C42705321E3FE8DD00B8B570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42705301E3FE8DD00B8B570 /* LaunchScreen.storyboard */; };
 		C427053D1E3FF48700B8B570 /* ParentRandomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C427053C1E3FF48700B8B570 /* ParentRandomListTableViewController.swift */; };
+		C42705481E40002400B8B570 /* ChildRandomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42705471E40002400B8B570 /* ChildRandomListViewController.swift */; };
+		C4514EDE1E4268450040BFDC /* ChildRandomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */; };
+		C4514EE01E426E930040BFDC /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EDF1E426E930040BFDC /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C42705311E3FE8DD00B8B570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42705331E3FE8DD00B8B570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C427053C1E3FF48700B8B570 /* ParentRandomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentRandomListTableViewController.swift; sourceTree = "<group>"; };
+		C42705471E40002400B8B570 /* ChildRandomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildRandomListViewController.swift; sourceTree = "<group>"; };
+		C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildRandomListTableViewCell.swift; sourceTree = "<group>"; };
+		C4514EDF1E426E930040BFDC /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				C42705391E3FEB0400B8B570 /* Supporting Files */,
-				C427053A1E3FEB5000B8B570 /* ParentList */,
+				C427053A1E3FEB5000B8B570 /* Parent List */,
+				C42705451E3FFFDE00B8B570 /* Child List */,
 				C42705281E3FE8DD00B8B570 /* Main.storyboard */,
 				C427052B1E3FE8DD00B8B570 /* RandomListTest.xcdatamodeld */,
 			);
@@ -75,12 +82,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C427053A1E3FEB5000B8B570 /* ParentList */ = {
+		C427053A1E3FEB5000B8B570 /* Parent List */ = {
 			isa = PBXGroup;
 			children = (
 				C427053B1E3FEB6100B8B570 /* Controller */,
 			);
-			name = ParentList;
+			name = "Parent List";
 			sourceTree = "<group>";
 		};
 		C427053B1E3FEB6100B8B570 /* Controller */ = {
@@ -89,6 +96,32 @@
 				C427053C1E3FF48700B8B570 /* ParentRandomListTableViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		C42705451E3FFFDE00B8B570 /* Child List */ = {
+			isa = PBXGroup;
+			children = (
+				C4514EDC1E42682A0040BFDC /* View */,
+				C42705461E3FFFEC00B8B570 /* Controller */,
+			);
+			name = "Child List";
+			sourceTree = "<group>";
+		};
+		C42705461E3FFFEC00B8B570 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C42705471E40002400B8B570 /* ChildRandomListViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C4514EDC1E42682A0040BFDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4514EDF1E426E930040BFDC /* MaterialView.swift */,
+				C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C427053D1E3FF48700B8B570 /* ParentRandomListTableViewController.swift in Sources */,
+				C4514EDE1E4268450040BFDC /* ChildRandomListTableViewCell.swift in Sources */,
 				C42705251E3FE8DD00B8B570 /* AppDelegate.swift in Sources */,
+				C4514EE01E426E930040BFDC /* MaterialView.swift in Sources */,
+				C42705481E40002400B8B570 /* ChildRandomListViewController.swift in Sources */,
 				C427052D1E3FE8DD00B8B570 /* RandomListTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,22 +28,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let listItem1 = RandomListItem(context: managedObjectContext)
             listItem1.name = "Perry"
+            listItem1.num = 1
             listItem1.list = list
             
             let listItem2 = RandomListItem(context: managedObjectContext)
             listItem2.name = "Caleb"
+            listItem2.num = 2
             listItem2.list = list
             
             let listItem3 = RandomListItem(context: managedObjectContext)
             listItem3.name = "Brian"
+            listItem3.num = 3
             listItem3.list = list
             
             let listItem4 = RandomListItem(context: managedObjectContext)
             listItem4.name = "Ryan"
+            listItem4.num = 4
             listItem4.list = list
             
             let listItem5 = RandomListItem(context: managedObjectContext)
             listItem5.name = "Aria"
+            listItem5.num = 5
             listItem5.list = list
         }
         do {
@@ -52,18 +57,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let listItem1 = RandomListItem(context: managedObjectContext)
             listItem1.name = "Chest, triceps, and calves"
+            listItem1.num = 1
             listItem1.list = list
             
             let listItem2 = RandomListItem(context: managedObjectContext)
             listItem2.name = "Back, biceps, and abs"
+            listItem2.num = 2
             listItem2.list = list
             
             let listItem3 = RandomListItem(context: managedObjectContext)
             listItem3.name = "Shoulders, traps, and calves"
+            listItem3.num = 3
             listItem3.list = list
             
             let listItem4 = RandomListItem(context: managedObjectContext)
             listItem4.name = "Legs and abs"
+            listItem4.num = 4
             listItem4.list = list
         }
         do {
@@ -72,28 +81,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let listItem1 = RandomListItem(context: managedObjectContext)
             listItem1.name = "M&Ms"
+            listItem1.num = 1
             listItem1.list = list
             
             let listItem2 = RandomListItem(context: managedObjectContext)
             listItem2.name = "Heath"
+            listItem2.num = 2
             listItem2.list = list
             
             let listItem3 = RandomListItem(context: managedObjectContext)
             listItem3.name = "Take 5"
+            listItem3.num = 3
             listItem3.list = list
             
             let listItem4 = RandomListItem(context: managedObjectContext)
             listItem4.name = "Payday"
+            listItem4.num = 4
             listItem4.list = list
             
             let listItem5 = RandomListItem(context: managedObjectContext)
             listItem5.name = "Butterfinger"
+            listItem5.num = 5
             listItem5.list = list
         }
         do {
             let list = RandomList(context: managedObjectContext)
             list.title = "This list has a really long title for testing purposes"
             
+            var num: Int32 = 1
             for letter in ["a","b","c","d","e","f"] {
                 var str = "Long list item"
                 for _ in 0..<100 {
@@ -101,6 +116,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 let listItem = RandomListItem(context: managedObjectContext)
                 listItem.name = str
+                listItem.num = num
+                num += 1
                 listItem.list = list
             }
         }
@@ -108,10 +125,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let list = RandomList(context: managedObjectContext)
             list.title = "Favorite 3 digit numbers"
             
+            var num: Int32 = 1
             for i in 100..<1000 {
                 if arc4random_uniform(5) == 0 {
                     let listItem = RandomListItem(context: managedObjectContext)
                     listItem.name = "\(i)"
+                    listItem.num = num
+                    num += 1
                     listItem.list = list
                 }
             }

@@ -158,14 +158,25 @@ class ParentRandomListTableViewController: UITableViewController, NSFetchedResul
         tableView.endUpdates()
     }
 
-    /*
     // MARK: - Navigation
+    
+    @IBAction func childListViewcontrollerExited(unwindSegue: UIStoryboardSegue) {
+        print("Neat")
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell {
+            if let cellIndexPath = tableView.indexPath(for: cell) {
+                if let randomList = controller?.object(at: cellIndexPath) {
+                    if let destination = segue.destination as? ChildRandomListViewController {
+                        destination.list = randomList
+                    }
+                }
+            }
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
