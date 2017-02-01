@@ -16,6 +16,7 @@
 		C42705481E40002400B8B570 /* ChildRandomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42705471E40002400B8B570 /* ChildRandomListViewController.swift */; };
 		C4514EDE1E4268450040BFDC /* ChildRandomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */; };
 		C4514EE01E426E930040BFDC /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EDF1E426E930040BFDC /* MaterialView.swift */; };
+		C4514EE31E427C780040BFDC /* SingleListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EE21E427C780040BFDC /* SingleListItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C42705471E40002400B8B570 /* ChildRandomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildRandomListViewController.swift; sourceTree = "<group>"; };
 		C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildRandomListTableViewCell.swift; sourceTree = "<group>"; };
 		C4514EDF1E426E930040BFDC /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		C4514EE21E427C780040BFDC /* SingleListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleListItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C42705391E3FEB0400B8B570 /* Supporting Files */,
 				C427053A1E3FEB5000B8B570 /* Parent List */,
 				C42705451E3FFFDE00B8B570 /* Child List */,
+				C4514EE11E427C540040BFDC /* Single List Item */,
 				C42705281E3FE8DD00B8B570 /* Main.storyboard */,
 				C427052B1E3FE8DD00B8B570 /* RandomListTest.xcdatamodeld */,
 			);
@@ -122,6 +125,22 @@
 				C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C4514EE11E427C540040BFDC /* Single List Item */ = {
+			isa = PBXGroup;
+			children = (
+				C4514EE41E427C7C0040BFDC /* Controller */,
+			);
+			name = "Single List Item";
+			sourceTree = "<group>";
+		};
+		C4514EE41E427C7C0040BFDC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4514EE21E427C780040BFDC /* SingleListItemViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,7 @@
 			files = (
 				C427053D1E3FF48700B8B570 /* ParentRandomListTableViewController.swift in Sources */,
 				C4514EDE1E4268450040BFDC /* ChildRandomListTableViewCell.swift in Sources */,
+				C4514EE31E427C780040BFDC /* SingleListItemViewController.swift in Sources */,
 				C42705251E3FE8DD00B8B570 /* AppDelegate.swift in Sources */,
 				C4514EE01E426E930040BFDC /* MaterialView.swift in Sources */,
 				C42705481E40002400B8B570 /* ChildRandomListViewController.swift in Sources */,

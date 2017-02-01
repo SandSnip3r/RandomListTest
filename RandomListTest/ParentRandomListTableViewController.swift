@@ -13,6 +13,7 @@ class ParentRandomListTableViewController: UITableViewController, NSFetchedResul
     
     struct Identifiers {
         static let RandomListCell = "RandomListCell"
+        static let GoToChildList = "GoToChildList"
     }
 
     override func viewDidLoad() {
@@ -160,8 +161,8 @@ class ParentRandomListTableViewController: UITableViewController, NSFetchedResul
 
     // MARK: - Navigation
     
-    @IBAction func childListViewcontrollerExited(unwindSegue: UIStoryboardSegue) {
-        print("Neat")
+    @IBAction func unwindToParentTable(unwindSegue: UIStoryboardSegue) {
+        print("Neat1")
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

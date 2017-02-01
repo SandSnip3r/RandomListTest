@@ -14,27 +14,27 @@
         <scene sceneID="nQe-Ex-5Pg">
             <objects>
                 <tableViewController id="MCg-cD-ebO" customClass="ParentRandomListTableViewController" customModule="RandomListTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MzJ-Xj-zuB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="MzJ-Xj-zuB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RandomListCell" textLabel="eN5-HX-hNT" detailTextLabel="XL4-Lr-zFW" style="IBUITableViewCellStyleSubtitle" id="WJ4-Qt-B8F">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RandomListCell" textLabel="eN5-HX-hNT" detailTextLabel="XL4-Lr-zFW" rowHeight="51" style="IBUITableViewCellStyleSubtitle" id="WJ4-Qt-B8F">
+                                <rect key="frame" x="0.0" y="28" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WJ4-Qt-B8F" id="5tc-8P-H6H">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="List title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eN5-HX-hNT">
-                                            <rect key="frame" x="15" y="3" width="65" height="21"/>
+                                            <rect key="frame" x="15" y="7" width="65" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="List item 1, list item 2, list item 3, ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XL4-Lr-zFW">
-                                            <rect key="frame" x="15" y="24" width="212" height="16"/>
+                                            <rect key="frame" x="15" y="28" width="212" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="SWm-VW-cZv" kind="show" id="hkb-M7-aW3"/>
+                                    <segue destination="SWm-VW-cZv" kind="show" identifier="GoToChildList" id="hkb-M7-aW3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -94,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="148" width="375" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RandomListItemCell" rowHeight="52" id="dDg-1S-jDC" customClass="ChildRandomListTableViewCell" customModule="RandomListTest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RandomListItemCell" rowHeight="52" id="dDg-1S-jDC" customClass="ChildRandomListTableViewCell" customModule="RandomListTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dDg-1S-jDC" id="E7c-cu-Yq8">
@@ -143,6 +143,7 @@
                                         <connections>
                                             <outlet property="itemNameLabel" destination="PVT-tD-eS6" id="cCN-d6-Yy1"/>
                                             <outlet property="itemNumberLabel" destination="IJC-Eg-Qur" id="n6d-ef-wBc"/>
+                                            <segue destination="k4A-EJ-SPB" kind="show" identifier="GoToEditListItem" id="mVi-L2-7cG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -170,21 +171,74 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="039-l3-9pN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NFb-sB-xtU">
-                            <connections>
-                                <segue destination="57S-IP-mVQ" kind="unwind" unwindAction="childListViewcontrollerExitedWithUnwindSegue:" id="Q1P-Wv-sNe"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ly3-fw-agg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ly3-fw-agg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="2sg-cF-ffB" id="7AG-sZ-1uI"/>
                         <outlet property="titleTextField" destination="YRH-6t-3yt" id="3uq-LX-Hwo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyv-xT-qyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="57S-IP-mVQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1800.8" y="-54.422788605697157"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="FIB-nN-Fs9">
+            <objects>
+                <viewController id="k4A-EJ-SPB" customClass="SingleListItemViewController" customModule="RandomListTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wgU-BD-oMT"/>
+                        <viewControllerLayoutGuide type="bottom" id="szj-cO-3Ga"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SkH-U1-6RD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QqB-aY-VZm">
+                                <rect key="frame" x="16" y="72" width="343" height="60.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List item name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXX-cq-Zc8">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEK-AQ-679">
+                                        <rect key="frame" x="0.0" y="30.5" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QqB-aY-VZm" firstAttribute="top" secondItem="wgU-BD-oMT" secondAttribute="bottom" constant="8" symbolic="YES" id="0TZ-Mc-XuC"/>
+                            <constraint firstItem="QqB-aY-VZm" firstAttribute="leading" secondItem="SkH-U1-6RD" secondAttribute="leadingMargin" id="Lcm-BN-XLt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QqB-aY-VZm" secondAttribute="trailing" id="aA0-wG-Jwu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="8yP-HA-xTI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oHE-O3-j9x">
+                            <connections>
+                                <action selector="cancelClicked:" destination="k4A-EJ-SPB" id="3ai-hX-Xoz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dTD-Y6-lCZ">
+                            <connections>
+                                <segue destination="5Y7-wd-mAM" kind="unwind" unwindAction="listItemSavedWithUnwindSegue:" id="cwv-cg-PT4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="listItemNameTextField" destination="qEK-AQ-679" id="tod-qc-M30"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pD6-5R-Kpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5Y7-wd-mAM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="-54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rxY-I8-cNT">
