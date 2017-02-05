@@ -17,6 +17,7 @@
 		C4514EDE1E4268450040BFDC /* ChildRandomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */; };
 		C4514EE01E426E930040BFDC /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EDF1E426E930040BFDC /* MaterialView.swift */; };
 		C4514EE31E427C780040BFDC /* SingleListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4514EE21E427C780040BFDC /* SingleListItemViewController.swift */; };
+		C4BA53711E466E08003CDC27 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BA53701E466E08003CDC27 /* Extenstions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C4514EDD1E4268450040BFDC /* ChildRandomListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildRandomListTableViewCell.swift; sourceTree = "<group>"; };
 		C4514EDF1E426E930040BFDC /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		C4514EE21E427C780040BFDC /* SingleListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleListItemViewController.swift; sourceTree = "<group>"; };
+		C4BA53701E466E08003CDC27 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				C427052E1E3FE8DD00B8B570 /* Assets.xcassets */,
 				C42705301E3FE8DD00B8B570 /* LaunchScreen.storyboard */,
 				C42705331E3FE8DD00B8B570 /* Info.plist */,
+				C4BA53701E466E08003CDC27 /* Extenstions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BA53711E466E08003CDC27 /* Extenstions.swift in Sources */,
 				C427053D1E3FF48700B8B570 /* ParentRandomListTableViewController.swift in Sources */,
 				C4514EDE1E4268450040BFDC /* ChildRandomListTableViewCell.swift in Sources */,
 				C4514EE31E427C780040BFDC /* SingleListItemViewController.swift in Sources */,
